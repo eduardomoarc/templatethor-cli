@@ -27,12 +27,8 @@ class ProjectRenderer:
 
         for i, context in enumerate(contexts):
             model_name = self._get_model_name(context, i)
-            base_output_dir = output_path / model_name
-
-            self._prepare_model_directory(base_output_dir)
-            self._render_project_files(project_path, base_output_dir, output_path, env, context)
-
-            self.console.print(f"[green]Rendered project for model '{model_name}' into folder '{base_output_dir}'[/green]")
+            self._render_project_files(project_path, output_path, output_path, env, context)
+            self.console.print(f"[green]Rendered project for model '{model_name}'[/green]")
 
     def _create_jinja_environment(self, project_path: Path) -> Environment:
         env = Environment(
