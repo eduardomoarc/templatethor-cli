@@ -3,6 +3,9 @@
 /output/
 /.claude/
 
+# IDE folders
+.idea/
+
 # Python-related ignores
 __pycache__/
 *.py[cod]
