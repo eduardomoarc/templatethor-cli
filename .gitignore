@@ -1,0 +1,11 @@
+# Exclude project-generated folders
+/projects/
+/output/
+/.claude/
+
+# Python-related ignores
+__pycache__/
+*.py[cod]
+*.egg-info/
+.env
+.venv
