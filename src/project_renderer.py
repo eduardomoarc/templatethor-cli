@@ -34,6 +34,8 @@ class ProjectRenderer:
         env = Environment(
             loader=FileSystemLoader(str(project_path)),
             undefined=KeepUndefined,
+            trim_blocks=True,
+            lstrip_blocks=True,
         )
         env.filters["upper_camel_case"] = upper_camel_case
         env.filters["dots"] = dots
