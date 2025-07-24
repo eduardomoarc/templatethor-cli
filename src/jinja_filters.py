@@ -12,6 +12,12 @@ def dots(value) -> str:
     return text.replace(" ", ".").replace("_", ".")
 
 
+def underscore(value) -> str:
+    text = str(value)
+    text = re.sub(r'[\s-]+', '_', text)
+    return text.lower()
+
+
 class KeepUndefined(Undefined):
     def _fail_with_undefined_error(self, *args, **kwargs):
         return f"{{{{ {self._undefined_name} }}}}"
